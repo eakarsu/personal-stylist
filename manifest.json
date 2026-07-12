@@ -1,0 +1,30 @@
+{
+  "id": "personal-stylist",
+  "title": "Personal Stylist App",
+  "industry": "Retail, Commerce & Consumer",
+  "industryId": "retail-commerce-consumer",
+  "specialization": "Personal Stylist",
+  "sourcePlatformGroup": "retail-ecommerce-platform",
+  "sources": [
+    "AIPersonalStylist",
+    "AIPersonalWardrobeOrganizer",
+    "AISubscriptionBoxCurator",
+    "AiECommerceAgent"
+  ],
+  "featureCount": 220,
+  "candidateFeatureCount": 348,
+  "eliminatedSimilarFeatures": 128,
+  "evidenceCount": 1134,
+  "aiPageCount": 0,
+  "sourceAIPageCount": 0,
+  "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
+  "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
+  "database": "database.sqlite",
+  "databaseSeed": {
+    "seededProjects": 1,
+    "seededTables": 15,
+    "seededRows": 226
+  },
+  "visibleFeatureCount": 10,
+  "featureVisibilityMode": "seeded-or-ai"
+}
