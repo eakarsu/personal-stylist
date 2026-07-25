@@ -1,5 +1,31 @@
 [
   {
+    "name": "A B Testing",
+    "canonicalKey": "a b testing",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ab-tests"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/ABTests.jsx:1",
+        "route": "/ab-tests",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Ab Tests",
     "canonicalKey": "ab test",
     "aliases": [],
@@ -249,10 +275,12 @@
     "canonicalKey": "ai generate",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
       "/content/ai-generate",
+      "/content?tool=ai-generate",
       "/forecasts/ai-generate"
     ],
     "sourceProjects": [
@@ -262,6 +290,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Content.jsx:133",
+        "route": "/content?tool=ai-generate",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AiECommerceAgent",
@@ -283,10 +318,12 @@
     "canonicalKey": "ai copy generate",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/campaigns/:id/ai-generate-copy"
+      "/campaigns/:id/ai-generate-copy",
+      "/campaigns?tool=ai-generate-copy"
     ],
     "sourceProjects": [
       "AiECommerceAgent"
@@ -296,10 +333,86 @@
     ],
     "evidence": [
       {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Campaigns.jsx:1",
+        "route": "/campaigns?tool=ai-generate-copy",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
         "kind": "api",
         "sourceProject": "AiECommerceAgent",
         "path": "backend/src/routes/index.js:487",
         "route": "/campaigns/:id/ai-generate-copy",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
+    "name": "AI History",
+    "canonicalKey": "ai history",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "page"
+    ],
+    "routes": [
+      "/AIHistory"
+    ],
+    "sourceProjects": [
+      "AIPersonalStylist"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/pages/AIHistory.jsx:1",
+        "route": "/AIHistory",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/pages/AIHistory.jsx",
+        "route": "/AIHistory",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
+    "name": "AI Optimize",
+    "canonicalKey": "ai optimize",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/products/:id/ai-optimize",
+      "/products?tool=ai-optimize"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Products.jsx:1",
+        "route": "/products?tool=ai-optimize",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiECommerceAgent",
+        "path": "backend/src/routes/index.js:293",
+        "route": "/products/:id/ai-optimize",
         "originApp": "retail-commerce-consumer/personal-stylist"
       }
     ]
@@ -371,10 +484,12 @@
     "canonicalKey": "ai respond",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
-      "/reviews/:id/ai-respond"
+      "/reviews/:id/ai-respond",
+      "/reviews?tool=ai-respond"
     ],
     "sourceProjects": [
       "AiECommerceAgent"
@@ -383,6 +498,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Reviews.jsx:1",
+        "route": "/reviews?tool=ai-respond",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AiECommerceAgent",
@@ -414,6 +536,101 @@
         "sourceProject": "AiECommerceAgent",
         "path": "backend/src/routes/index.js:382",
         "route": "/pricing/ai-suggest",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
+    "name": "Analyze",
+    "canonicalKey": "analyze",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "api"
+    ],
+    "routes": [
+      "/ai/analyze",
+      "/analyze",
+      "/campaigns?tool=analyze",
+      "/products?tool=analyze",
+      "/reviews?tool=analyze"
+    ],
+    "sourceProjects": [
+      "AISubscriptionBoxCurator",
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/competitorPriceMonitor.js:46",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/customerLtvPredictor.js:46",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/logisticsAddressValidator.js:46",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/preferenceBandit.js:46",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/seasonalDemandForecast.js:46",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "backend/src/routes/unboxingOptimizer.js:46",
+        "route": "/analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Campaigns.jsx:1",
+        "route": "/campaigns?tool=analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Products.jsx:1",
+        "route": "/products?tool=analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Reviews.jsx:1",
+        "route": "/reviews?tool=analyze",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiECommerceAgent",
+        "path": "backend/src/routes/index.js:1912",
+        "route": "/ai/analyze",
         "originApp": "retail-commerce-consumer/personal-stylist"
       }
     ]
@@ -452,25 +669,15 @@
       "api"
     ],
     "routes": [
-      "/:id/analyze-photo",
-      "/analyze-photo"
+      "/:id/analyze-photo"
     ],
     "sourceProjects": [
-      "AIPersonalStylist",
-      "AIPhotographyBusinessManager"
+      "AIPersonalStylist"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/cemetery-memorial-park-manager",
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AIPhotographyBusinessManager",
-        "path": "backend/routes/ai.js:149",
-        "route": "/analyze-photo",
-        "originApp": "retail-commerce-consumer/cemetery-memorial-park-manager"
-      },
       {
         "kind": "api",
         "sourceProject": "AIPersonalStylist",
@@ -781,9 +988,12 @@
     "canonicalKey": "box curator",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/curate-box"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -791,6 +1001,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:12",
+        "route": "/ai/curate-box",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -3032,6 +3249,32 @@
     ]
   },
   {
+    "name": "Color Analysis",
+    "canonicalKey": "analysis color",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ai/color-analysis"
+    ],
+    "sourceProjects": [
+      "AIPersonalStylist"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/config/features.js:103",
+        "route": "/ai/color-analysis",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Commerce Advice",
     "canonicalKey": "advice commerce",
     "aliases": [],
@@ -3058,13 +3301,41 @@
     ]
   },
   {
+    "name": "Competitor Analysis",
+    "canonicalKey": "analysis competitor",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/competitors"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Competitors.jsx:1",
+        "route": "/competitors",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Competitor Price Monitor",
     "canonicalKey": "competitor monitor price",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/ai/competitor-price-monitor",
       "/competitor-price-monitor"
     ],
     "sourceProjects": [
@@ -3074,6 +3345,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:170",
+        "route": "/ai/competitor-price-monitor",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -4306,13 +4584,15 @@
     ]
   },
   {
-    "name": "Customer Segmentation",
-    "canonicalKey": "customer segmentation",
+    "name": "Customer Ltv Predictor",
+    "canonicalKey": "customer ltv predictor",
     "aliases": [],
     "kinds": [
-      "navigation"
+      "ai-page"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/customer-ltv"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -4320,6 +4600,40 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:147",
+        "route": "/ai/customer-ltv",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
+    "name": "Customer Segmentation",
+    "canonicalKey": "customer segmentation",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "navigation"
+    ],
+    "routes": [
+      "/ai/segment-customers"
+    ],
+    "sourceProjects": [
+      "AISubscriptionBoxCurator"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:136",
+        "route": "/ai/segment-customers",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -4330,247 +4644,55 @@
     ]
   },
   {
+    "name": "Customer Segments",
+    "canonicalKey": "customer segment",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/segments"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Segments.jsx:1",
+        "route": "/segments",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Customers",
     "canonicalKey": "customer",
-    "aliases": [
-      "Customer Detail",
-      "Customers View"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
-      "model",
       "navigation",
       "page"
     ],
     "routes": [
-      "/CustomerDetail",
       "/Customers",
-      "/Customers/CustomersView",
       "/bulk/customers",
       "/customers",
-      "/dashboard/customers",
-      "/export/customers",
-      "/features/Customers",
-      "customers"
+      "/export/customers"
     ],
     "sourceProjects": [
-      "AIGhostKitchenNetworkManager",
-      "AIPawnShopSecondhandDealer",
-      "AIPressureWashingExteriorCleaning",
       "AISubscriptionBoxCurator",
-      "AIVirtualShowroomBuilder",
-      "AiECommerceAgent",
-      "OrderingServiceText2",
-      "homeservices",
-      "independentRestaurant",
-      "laundryServices",
-      "pestControl",
-      "pos",
-      "repairShop"
+      "AiECommerceAgent"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/circular-economy-upcycling-marketplace",
-      "retail-commerce-consumer/commercial-cleaning-operations",
-      "retail-commerce-consumer/food-bank-pantry-manager",
-      "retail-commerce-consumer/food-flow-order",
-      "retail-commerce-consumer/generic-ordering-service-enhanced",
-      "retail-commerce-consumer/inventory-forecasting",
-      "retail-commerce-consumer/laundry-services",
-      "retail-commerce-consumer/local-service-directory",
-      "retail-commerce-consumer/marketplace-builder-platform",
-      "retail-commerce-consumer/personal-stylist",
-      "retail-commerce-consumer/youth-sports-league-manager"
+      "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIPressureWashingExteriorCleaning",
-        "path": "client/src/App.js:152",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/commercial-cleaning-operations"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIPressureWashingExteriorCleaning",
-        "path": "client/src/pages/Dashboard.js:6",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/commercial-cleaning-operations"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIPressureWashingExteriorCleaning",
-        "path": "client/src/pages/features/Customers.js",
-        "route": "/features/Customers",
-        "originApp": "retail-commerce-consumer/commercial-cleaning-operations"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/routers/customViews.py:137",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "laundryServices",
-        "path": "frontend/src/pages/CustomerDetail.jsx",
-        "route": "/CustomerDetail",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/reports.js:239",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "laundryServices",
-        "path": "frontend/src/pages/Customers.jsx",
-        "route": "/Customers",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "model",
-        "sourceProject": "homeservices",
-        "path": "ios-native/ServiceCrewTech/Models/Customer.swift",
-        "route": "",
-        "originApp": "retail-commerce-consumer/local-service-directory"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "homeservices",
-        "path": "src/components/layout/Sidebar.tsx:29",
-        "route": "",
-        "originApp": "retail-commerce-consumer/local-service-directory"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "homeservices",
-        "path": "src/app/dashboard/customers/page.tsx",
-        "route": "/dashboard/customers",
-        "originApp": "retail-commerce-consumer/local-service-directory"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "homeservices",
-        "path": "ios-native/ServiceCrewTech/Views/Customers/CustomersView.swift",
-        "route": "/Customers/CustomersView",
-        "originApp": "retail-commerce-consumer/local-service-directory"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pestControl",
-        "path": "frontend/src/pages/CustomerDetail.jsx",
-        "route": "/CustomerDetail",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "pestControl",
-        "path": "backend/src/routes/reports.js:132",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pestControl",
-        "path": "frontend/src/pages/Customers.jsx",
-        "route": "/Customers",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "repairShop",
-        "path": "src/app/(dashboard)/dashboard/customers/page.tsx",
-        "route": "/dashboard/customers",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIPawnShopSecondhandDealer",
-        "path": "client/src/App.jsx:75",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIPawnShopSecondhandDealer",
-        "path": "client/src/components/Layout.jsx:29",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIPawnShopSecondhandDealer",
-        "path": "client/src/pages/Customers.jsx",
-        "route": "/Customers",
-        "originApp": "retail-commerce-consumer/circular-economy-upcycling-marketplace"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "frontend/src/App.tsx:205",
-        "route": "customers",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "frontend/src/App.tsx:218",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "frontend/src/pages/Customers.tsx",
-        "route": "/Customers",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "pos",
-        "path": "src/routes/reports.ts:128",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/components/Sidebar.jsx:17",
-        "route": "",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/App.jsx:91",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/components/Sidebar.jsx:17",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/pages/Dashboard.jsx:47",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISubscriptionBoxCurator",
-        "path": "frontend/src/pages/CustomerDetail.jsx",
-        "route": "/CustomerDetail",
-        "originApp": "retail-commerce-consumer/personal-stylist"
-      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -4590,6 +4712,13 @@
         "sourceProject": "AISubscriptionBoxCurator",
         "path": "frontend/src/pages/Customers.jsx",
         "route": "/Customers",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Customers.jsx:1",
+        "route": "/customers",
         "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
@@ -4647,48 +4776,6 @@
         "path": "frontend/src/pages/Dashboard.jsx:11",
         "route": "/customers",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/App.jsx:102",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/App.jsx:206",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/pages/Customers.jsx",
-        "route": "/Customers",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/pages/Dashboard.jsx:37",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "independentRestaurant",
-        "path": "src/components/layout/sidebar.tsx:46",
-        "route": "",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "independentRestaurant",
-        "path": "src/app/(dashboard)/customers/page.tsx",
-        "route": "/customers",
-        "originApp": "retail-commerce-consumer/food-flow-order"
       }
     ]
   },
@@ -4785,9 +4872,12 @@
     "canonicalKey": "demand forecaster",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/forecast-demand"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -4795,6 +4885,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:83",
+        "route": "/ai/forecast-demand",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -4809,9 +4906,12 @@
     "canonicalKey": "description writer",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/write-description"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -4819,6 +4919,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:60",
+        "route": "/ai/write-description",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -4885,6 +4992,32 @@
         "sourceProject": "AISubscriptionBoxCurator",
         "path": "frontend/src/pages/Dashboard.jsx:42",
         "route": "/ai/discover-products",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
+    "name": "Dynamic Pricing",
+    "canonicalKey": "dynamic pricing",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/pricing"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Pricing.jsx:1",
+        "route": "/pricing",
         "originApp": "retail-commerce-consumer/personal-stylist"
       }
     ]
@@ -5160,9 +5293,12 @@
     "canonicalKey": "analyzer feedback",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/analyze-feedback"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -5170,6 +5306,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:72",
+        "route": "/ai/analyze-feedback",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -10179,6 +10322,58 @@
     ]
   },
   {
+    "name": "Item Details",
+    "canonicalKey": "item",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/outfit-generator"
+    ],
+    "sourceProjects": [
+      "AIPersonalStylist"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/pages/FeaturePage.jsx:1",
+        "route": "/outfit-generator",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
+    "name": "Items In This Box",
+    "canonicalKey": "box in item this",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/subscription-boxes/:id"
+    ],
+    "sourceProjects": [
+      "AISubscriptionBoxCurator"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/BoxDetail.jsx:1",
+        "route": "/subscription-boxes/:id",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Ledger",
     "canonicalKey": "ledger",
     "aliases": [],
@@ -10267,38 +10462,62 @@
     ]
   },
   {
+    "name": "Market Trends",
+    "canonicalKey": "market trend",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/trends"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Trends.jsx:1",
+        "route": "/trends",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Marketing Copy",
     "canonicalKey": "copy marketing",
     "aliases": [],
     "kinds": [
-      "api",
+      "ai-page",
       "navigation"
     ],
     "routes": [
-      "/marketing-copy"
+      "/ai/generate-marketing"
     ],
     "sourceProjects": [
-      "AIBakeryProductionManager",
       "AISubscriptionBoxCurator"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/food-bank-pantry-manager",
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:104",
+        "route": "/ai/generate-marketing",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
         "path": "frontend/src/components/Sidebar.jsx:32",
         "route": "",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIBakeryProductionManager",
-        "path": "backend/routes/ai.js:130",
-        "route": "/marketing-copy",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
       }
     ]
   },
@@ -10569,314 +10788,56 @@
     ]
   },
   {
+    "name": "Order History",
+    "canonicalKey": "history order",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/customers/:id"
+    ],
+    "sourceProjects": [
+      "AISubscriptionBoxCurator"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/CustomerDetail.jsx:1",
+        "route": "/customers/:id",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Orders",
     "canonicalKey": "order",
-    "aliases": [
-      "New Order",
-      "Order",
-      "Order Detail",
-      "Order Detail Page",
-      "Order Views",
-      "Orders Page"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
-      "model",
       "navigation",
       "page"
     ],
     "routes": [
-      "/:id/orders",
-      "/NewOrder",
-      "/OrderDetail",
       "/Orders",
-      "/OrdersPage",
-      "/api/commerce/orders",
-      "/api/orders",
       "/bulk/orders",
-      "/customer/orders",
       "/customers/:id/orders",
-      "/dashboard/orders",
-      "/distributors/order",
-      "/distributors/orders",
       "/export/orders",
-      "/order",
-      "/orders",
-      "/orders/OrderDetailPage",
-      "/orders/OrdersPage",
-      "/print-marketplace/order",
-      "/routers/orders",
-      "/shopify/orders",
-      "/suppliers/sysco/order",
-      "/suppliers/usfoods/order"
+      "/orders"
     ],
     "sourceProjects": [
-      "AIBakeryProductionManager",
-      "AIGhostKitchenNetworkManager",
-      "AIInventoryForecasting",
-      "AIPhotographyBusinessManager",
-      "AISalonSpaBookingOptimizer",
       "AISubscriptionBoxCurator",
-      "AIVirtualShowroomBuilder",
-      "AIWineSpiritsinventorySommelier",
-      "AiECommerceAgent",
-      "FoodOrderingWebSite",
-      "GenericOrderingServiceEnhanced",
-      "OrderingServiceText2",
-      "ai-food-flow-order",
-      "cateringService",
-      "dropShipping",
-      "footTruck",
-      "genericServiceOrder",
-      "independentRestaurant",
-      "laundryServices",
-      "repairShop"
+      "AiECommerceAgent"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/cemetery-memorial-park-manager",
-      "retail-commerce-consumer/classifytravelersecurity",
-      "retail-commerce-consumer/food-bank-pantry-manager",
-      "retail-commerce-consumer/food-flow-order",
-      "retail-commerce-consumer/generic-ordering-service-enhanced",
-      "retail-commerce-consumer/inventory-forecasting",
-      "retail-commerce-consumer/laundry-services",
-      "retail-commerce-consumer/marketplace-builder-platform",
-      "retail-commerce-consumer/personal-stylist",
-      "retail-commerce-consumer/recipe-meal-planner",
-      "retail-commerce-consumer/youth-sports-league-manager"
+      "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AIPhotographyBusinessManager",
-        "path": "backend/routes/integrations.js:316",
-        "route": "/print-marketplace/order",
-        "originApp": "retail-commerce-consumer/cemetery-memorial-park-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/pages/orders/OrderDetailPage.tsx",
-        "route": "/orders/OrderDetailPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/components/layout/Sidebar.tsx:12",
-        "route": "",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/ai.py:206",
-        "route": "/order",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/orders.py",
-        "route": "/routers/orders",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "model",
-        "sourceProject": "OrderingServiceText2",
-        "path": "backend/schemas/order.py",
-        "route": "",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/components/layout/Sidebar.tsx:7",
-        "route": "",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/App.tsx:45",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "model",
-        "sourceProject": "genericServiceOrder",
-        "path": "admin/models/order.py",
-        "route": "",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "model",
-        "sourceProject": "genericServiceOrder",
-        "path": "admin/schemas/order.py",
-        "route": "",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/components/layout/Sidebar.tsx:12",
-        "route": "",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/App.tsx:36",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "frontend/src/pages/OrdersPage.jsx",
-        "route": "/OrdersPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "OrderingServiceText2",
-        "path": "frontend/src/pages/orders/OrdersPage.tsx",
-        "route": "/orders/OrdersPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "genericServiceOrder",
-        "path": "frontend/src/pages/OrdersPage.tsx",
-        "route": "/OrdersPage",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "laundryServices",
-        "path": "frontend/src/pages/NewOrder.jsx",
-        "route": "/NewOrder",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "laundryServices",
-        "path": "frontend/src/pages/OrderDetail.jsx",
-        "route": "/OrderDetail",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AISalonSpaBookingOptimizer",
-        "path": "server/routes/suppliers.js:24",
-        "route": "/:id/orders",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AISalonSpaBookingOptimizer",
-        "path": "server/routes/suppliers.js:66",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/corporateB2B.js:19",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/customViews.js:217",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "laundryServices",
-        "path": "backend/src/routes/reports.js:75",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "laundryServices",
-        "path": "frontend/src/pages/Orders.jsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/laundry-services"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "repairShop",
-        "path": "src/app/(dashboard)/dashboard/orders/page.tsx",
-        "route": "/dashboard/orders",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIInventoryForecasting",
-        "path": "backend/src/routes/integrations.js:34",
-        "route": "/shopify/orders",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIInventoryForecasting",
-        "path": "frontend/src/App.jsx:188",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIInventoryForecasting",
-        "path": "frontend/src/pages/Orders.jsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "dropShipping",
-        "path": "src/app/(app)/customer/orders/page.tsx",
-        "route": "/customer/orders",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/components/Sidebar.jsx:18",
-        "route": "",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/App.jsx:92",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/components/Sidebar.jsx:18",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIVirtualShowroomBuilder",
-        "path": "client/src/pages/Dashboard.jsx:52",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/marketplace-builder-platform"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISubscriptionBoxCurator",
-        "path": "frontend/src/pages/OrderDetail.jsx",
-        "route": "/OrderDetail",
-        "originApp": "retail-commerce-consumer/personal-stylist"
-      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -10896,6 +10857,13 @@
         "sourceProject": "AISubscriptionBoxCurator",
         "path": "frontend/src/pages/Orders.jsx",
         "route": "/Orders",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Orders.jsx:1",
+        "route": "/orders",
         "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
@@ -10960,160 +10928,18 @@
         "path": "frontend/src/pages/Orders.jsx",
         "route": "/Orders",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIWineSpiritsinventorySommelier",
-        "path": "backend/routes/integrations.js:173",
-        "route": "/distributors/order",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIWineSpiritsinventorySommelier",
-        "path": "backend/routes/integrations.js:193",
-        "route": "/distributors/orders",
-        "originApp": "retail-commerce-consumer/classifytravelersecurity"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIBakeryProductionManager",
-        "path": "backend/routes/integrations.js:296",
-        "route": "/suppliers/sysco/order",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIBakeryProductionManager",
-        "path": "backend/routes/integrations.js:315",
-        "route": "/suppliers/usfoods/order",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIBakeryProductionManager",
-        "path": "frontend/src/pages/Orders.jsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/App.jsx:192",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/App.jsx:74",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/pages/Dashboard.jsx:9",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGhostKitchenNetworkManager",
-        "path": "frontend/src/pages/Orders.jsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "FoodOrderingWebSite",
-        "path": "server/routes.ts:120",
-        "route": "/api/orders",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "ai-food-flow-order",
-        "path": "src/App.tsx:100",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "ai-food-flow-order",
-        "path": "src/pages/Orders.tsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "footTruck",
-        "path": "frontend/src/App.jsx:66",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "footTruck",
-        "path": "frontend/src/components/Layout.jsx:30",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "footTruck",
-        "path": "frontend/src/pages/Orders.jsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "independentRestaurant",
-        "path": "src/components/layout/sidebar.tsx:34",
-        "route": "",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "independentRestaurant",
-        "path": "src/app/(dashboard)/orders/page.tsx",
-        "route": "/orders",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "cateringService",
-        "path": "backend/src/commerce/app.js:78",
-        "route": "/api/commerce/orders",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "cateringService",
-        "path": "backend/src/commerce/app.js:93",
-        "route": "/api/commerce/orders",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "cateringService",
-        "path": "frontend/src/pages/Orders.jsx",
-        "route": "/Orders",
-        "originApp": "retail-commerce-consumer/recipe-meal-planner"
       }
     ]
   },
   {
-    "name": "Outfit Generator Page",
+    "name": "Outfit Generator",
     "canonicalKey": "generator outfit",
-    "aliases": [
-      "Outfit Generator"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "page"
     ],
     "routes": [
-      "/OutfitGeneratorPage",
       "/outfit-generator"
     ],
     "sourceProjects": [
@@ -11124,12 +10950,38 @@
     ],
     "evidence": [
       {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/pages/OutfitGeneratorPage.jsx:1",
+        "route": "/outfit-generator",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
         "kind": "page",
         "sourceProject": "AIPersonalStylist",
         "path": "frontend/src/App.jsx:72",
         "route": "/outfit-generator",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Outfit Generator Page",
+    "canonicalKey": "generator outfit",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/OutfitGeneratorPage"
+    ],
+    "sourceProjects": [
+      "AIPersonalStylist"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIPersonalStylist",
@@ -11458,6 +11310,32 @@
     ]
   },
   {
+    "name": "Personalized Recommendations",
+    "canonicalKey": "personalized recommendation",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/ai/personalize-recommendations"
+    ],
+    "sourceProjects": [
+      "AISubscriptionBoxCurator"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:93",
+        "route": "/ai/personalize-recommendations",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Personalized Recs",
     "canonicalKey": "personalized recs",
     "aliases": [
@@ -11583,9 +11461,11 @@
     "canonicalKey": "bandit preference",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/ai/preference-bandit",
       "/preference-bandit"
     ],
     "sourceProjects": [
@@ -11595,6 +11475,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:182",
+        "route": "/ai/preference-bandit",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -11650,6 +11537,40 @@
         "path": "backend/src/routes/customViews.js:141",
         "route": "/preference-rules",
         "originApp": "retail-commerce-consumer/classifytravelersecurity"
+      }
+    ]
+  },
+  {
+    "name": "Price Optimizer",
+    "canonicalKey": "optimizer price",
+    "aliases": [],
+    "kinds": [
+      "ai-page",
+      "navigation"
+    ],
+    "routes": [
+      "/ai/optimize-price"
+    ],
+    "sourceProjects": [
+      "AISubscriptionBoxCurator"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:35",
+        "route": "/ai/optimize-price",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "navigation",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/components/Sidebar.jsx:26",
+        "route": "",
+        "originApp": "retail-commerce-consumer/personal-stylist"
       }
     ]
   },
@@ -11893,9 +11814,12 @@
     "canonicalKey": "discovery product",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/discover-products"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -11903,6 +11827,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:24",
+        "route": "/ai/discover-products",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -12031,9 +11962,12 @@
     "canonicalKey": "quality scorer",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/score-quality"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -12041,6 +11975,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:116",
+        "route": "/ai/score-quality",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -12186,66 +12127,24 @@
     "canonicalKey": "recommendation",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
-      "/:id/recommendations",
       "/Recommendations",
-      "/api/recommendations",
       "/recommendations",
-      "/routers/recommendations",
-      "/snapshots/:id/recommendations"
+      "/recommendations?tool=recommendations"
     ],
     "sourceProjects": [
-      "AIInventoryForecasting",
       "AIPersonalStylist",
       "AIPersonalWardrobeOrganizer",
-      "AIPricingOptimizer",
-      "AiECommerceAgent",
-      "FoodOrderingWebSite",
-      "GenericOrderingServiceEnhanced",
-      "ai-food-flow-order",
-      "pestControl"
+      "AiECommerceAgent"
     ],
     "consolidatedFromApps": [
-      "retail-commerce-consumer/food-bank-pantry-manager",
-      "retail-commerce-consumer/food-flow-order",
-      "retail-commerce-consumer/generic-ordering-service-enhanced",
-      "retail-commerce-consumer/inventory-forecasting",
-      "retail-commerce-consumer/personal-stylist",
-      "retail-commerce-consumer/pricing-optimizer",
-      "retail-commerce-consumer/youth-sports-league-manager"
+      "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "GenericOrderingServiceEnhanced",
-        "path": "backend/app/routers/recommendations.py",
-        "route": "/routers/recommendations",
-        "originApp": "retail-commerce-consumer/generic-ordering-service-enhanced"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "pestControl",
-        "path": "backend/src/routes/pests.js:228",
-        "route": "/recommendations",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "pestControl",
-        "path": "backend/src/routes/pests.js:252",
-        "route": "/recommendations",
-        "originApp": "retail-commerce-consumer/youth-sports-league-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIInventoryForecasting",
-        "path": "backend/src/routes/ai.js:9",
-        "route": "/recommendations",
-        "originApp": "retail-commerce-consumer/inventory-forecasting"
-      },
       {
         "kind": "api",
         "sourceProject": "AIPersonalStylist",
@@ -12258,6 +12157,13 @@
         "sourceProject": "AIPersonalWardrobeOrganizer",
         "path": "backend/routes/wardrobeWorkflow.js:9",
         "route": "/recommendations",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Recommendations.jsx:142",
+        "route": "/recommendations?tool=recommendations",
         "originApp": "retail-commerce-consumer/personal-stylist"
       },
       {
@@ -12301,34 +12207,6 @@
         "path": "frontend/src/pages/Recommendations.jsx",
         "route": "/Recommendations",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIPricingOptimizer",
-        "path": "backend/routes/governedPricing.js:102",
-        "route": "/snapshots/:id/recommendations",
-        "originApp": "retail-commerce-consumer/pricing-optimizer"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "FoodOrderingWebSite",
-        "path": "server/routes.ts:48",
-        "route": "/api/recommendations",
-        "originApp": "retail-commerce-consumer/food-bank-pantry-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "ai-food-flow-order",
-        "path": "server/src/routes/groupOrder.ts:52",
-        "route": "/:id/recommendations",
-        "originApp": "retail-commerce-consumer/food-flow-order"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "ai-food-flow-order",
-        "path": "src/App.tsx:123",
-        "route": "/recommendations",
-        "originApp": "retail-commerce-consumer/food-flow-order"
       }
     ]
   },
@@ -15412,6 +15290,32 @@
     ]
   },
   {
+    "name": "Sales Forecasting",
+    "canonicalKey": "forecasting sale",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/forecasts"
+    ],
+    "sourceProjects": [
+      "AiECommerceAgent"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AiECommerceAgent",
+        "path": "frontend/src/pages/Forecasts.jsx:1",
+        "route": "/forecasts",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Save Offer",
     "canonicalKey": "offer save",
     "aliases": [],
@@ -15466,15 +15370,13 @@
   {
     "name": "Seasonal Analysis",
     "canonicalKey": "analysis seasonal",
-    "aliases": [
-      "Seasonal Analysis Page"
-    ],
+    "aliases": [],
     "kinds": [
+      "ai-page",
       "api",
       "page"
     ],
     "routes": [
-      "/SeasonalAnalysisPage",
       "/seasonal-analysis"
     ],
     "sourceProjects": [
@@ -15485,6 +15387,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/pages/SeasonalAnalysisPage.jsx:1",
+        "route": "/seasonal-analysis",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPersonalStylist",
@@ -15505,7 +15414,26 @@
         "path": "backend/routes/ai.js:218",
         "route": "/seasonal-analysis",
         "originApp": "retail-commerce-consumer/personal-stylist"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Seasonal Analysis Page",
+    "canonicalKey": "analysis seasonal",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/SeasonalAnalysisPage"
+    ],
+    "sourceProjects": [
+      "AIPersonalStylist"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
       {
         "kind": "page",
         "sourceProject": "AIPersonalStylist",
@@ -15936,9 +15864,12 @@
     "canonicalKey": "generator theme",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/generate-theme"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -15946,6 +15877,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:48",
+        "route": "/ai/generate-theme",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -16019,9 +15957,12 @@
     "canonicalKey": "analyzer trend",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "navigation"
     ],
-    "routes": [],
+    "routes": [
+      "/ai/analyze-trends"
+    ],
     "sourceProjects": [
       "AISubscriptionBoxCurator"
     ],
@@ -16029,6 +15970,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:126",
+        "route": "/ai/analyze-trends",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "navigation",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -16124,9 +16072,11 @@
     "canonicalKey": "arrangement unboxing",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/ai/unboxing-arrangement",
       "/unboxing-arrangement"
     ],
     "sourceProjects": [
@@ -16136,6 +16086,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AISubscriptionBoxCurator",
+        "path": "frontend/src/pages/AIFeaturePage.jsx:158",
+        "route": "/ai/unboxing-arrangement",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AISubscriptionBoxCurator",
@@ -16468,6 +16425,32 @@
     ]
   },
   {
+    "name": "Wardrobe Photo Vision Analysis",
+    "canonicalKey": "analysis photo vision wardrobe",
+    "aliases": [],
+    "kinds": [
+      "ai-page"
+    ],
+    "routes": [
+      "/wardrobe-photo"
+    ],
+    "sourceProjects": [
+      "AIPersonalStylist"
+    ],
+    "consolidatedFromApps": [
+      "retail-commerce-consumer/personal-stylist"
+    ],
+    "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalStylist",
+        "path": "frontend/src/pages/WardrobePhotoPage.jsx:1",
+        "route": "/wardrobe-photo",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      }
+    ]
+  },
+  {
     "name": "Wear",
     "canonicalKey": "wear",
     "aliases": [],
@@ -16579,9 +16562,11 @@
     "canonicalKey": "analysis pattern wear",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/ai-advanced?tool=wear-pattern-analysis",
       "/wear-pattern-analysis"
     ],
     "sourceProjects": [
@@ -16591,6 +16576,13 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalWardrobeOrganizer",
+        "path": "frontend/src/pages/WardrobeAIAdvancedPage.js:150",
+        "route": "/ai-advanced?tool=wear-pattern-analysis",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPersonalWardrobeOrganizer",
@@ -16605,9 +16597,12 @@
     "canonicalKey": "pack weather",
     "aliases": [],
     "kinds": [
+      "ai-page",
       "api"
     ],
     "routes": [
+      "/ai-advanced?tool=weather-pack",
+      "/ai-insights?tool=weather-pack",
       "/weather-pack"
     ],
     "sourceProjects": [
@@ -16617,6 +16612,20 @@
       "retail-commerce-consumer/personal-stylist"
     ],
     "evidence": [
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalWardrobeOrganizer",
+        "path": "frontend/src/pages/AIInsightsPage.js:159",
+        "route": "/ai-insights?tool=weather-pack",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
+      {
+        "kind": "ai-page",
+        "sourceProject": "AIPersonalWardrobeOrganizer",
+        "path": "frontend/src/pages/WardrobeAIAdvancedPage.js:270",
+        "route": "/ai-advanced?tool=weather-pack",
+        "originApp": "retail-commerce-consumer/personal-stylist"
+      },
       {
         "kind": "api",
         "sourceProject": "AIPersonalWardrobeOrganizer",

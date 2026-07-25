@@ -3,7 +3,7 @@
 Industry: **Retail, Commerce & Consumer**  
 Specialization: **Personal Stylist**
 
-This standalone application consolidates source-backed capabilities into 226 optimized features, including 10 visible data-backed or AI-enabled views. Its public demo SQLite database contains 226 sanitized source rows across 15 imported tables and 120 operational workflow records.
+This standalone application consolidates source-backed capabilities into 245 optimized features, including 50 visible data-backed or AI-enabled views. Its public demo SQLite database contains 226 sanitized source rows across 15 imported tables and 120 operational workflow records.
 
 ## Run locally
 
